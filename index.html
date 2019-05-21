@@ -1461,7 +1461,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Updated at: 2019-05-21 16:35:21" itemprop="dateModified" datetime="2019-05-21T16:35:21+09:00">2019-05-21</time>
+                <time title="Updated at: 2019-05-21 16:50:28" itemprop="dateModified" datetime="2019-05-21T16:50:28+09:00">2019-05-21</time>
               
             
           </span>
@@ -1521,7 +1521,9 @@
 <p><strong>3. Hexo 서버 재시작</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s <span class="comment"># hexo server</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="테마-환경-설정"><a href="#테마-환경-설정" class="headerlink" title="테마 환경 설정"></a>테마 환경 설정</h2><p><strong>테마 환경파일 위치 : <code>themes/next/_config.yml</code></strong></p>
 <ul>
-<li><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># themes/next/_config.yml</span></span><br></pre></td></tr></table></figure>
+<li><p>아카이브(Archive) 내에 응원메세지(cheers) 비활성화 하기.<br>(한국어로 “음..! 총 n개의 포스트 포스트를 마저 작성하세요”라는 메세지가 출력되는데 마치 내 포스트가 전부 미완성인 것만 같다.)</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Enable "cheers" for archive page.</span></span><br><span class="line"><span class="attr">cheers:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p><code>themes/next/languages/ko.yml</code>파일에 있는 해당 문구를 변경해도 된다.</p>
 </li>
 <li><p>공통 아이콘<br>환경 파일 내부에서 사용되는 아이콘의 이름은 모두 <code>font-awesome(4.7버전)</code>을 사용한다. 각 아이콘의 이름은 다음 링크를 참고한다.<br><a href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">font-awesome (https://fontawesome.com/v4.7.0/icons/)</a></p>
 </li>
