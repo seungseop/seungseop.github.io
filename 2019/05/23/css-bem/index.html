@@ -109,7 +109,7 @@
 <meta property="og:description" content="프로젝트 작업할 때 CSS 선택자 즉, class를 작명하는데 기준이 없어 사람마다 다 다른 중구난방한 이름들을 볼 때마다 매우 답답한 게 있었는데요, 이번 기회에 이를 정리하고자 CSS 방법론을 알아보기로 합니다. 먼저 CSS 방법론을 사용하는 이유로는,  쉬운 유지 보수가 가능하다. 재사용이 가능하다. 쉽게 확장이 가능하다.와 같은 게 있다고 합니다.">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://seungseop.github.io/images/bem_logo.png">
-<meta property="og:updated_time" content="2019-05-23T09:17:54.594Z">
+<meta property="og:updated_time" content="2019-05-24T10:42:35.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BEM(Block Element Modifier) 방법론">
 <meta name="twitter:description" content="프로젝트 작업할 때 CSS 선택자 즉, class를 작명하는데 기준이 없어 사람마다 다 다른 중구난방한 이름들을 볼 때마다 매우 답답한 게 있었는데요, 이번 기회에 이를 정리하고자 CSS 방법론을 알아보기로 합니다. 먼저 CSS 방법론을 사용하는 이유로는,  쉬운 유지 보수가 가능하다. 재사용이 가능하다. 쉽게 확장이 가능하다.와 같은 게 있다고 합니다.">
@@ -384,12 +384,24 @@
                 
               
 
-              <time title="Post created: 2019-05-23 18:15:34 / Updated at: 18:17:54" itemprop="dateCreated datePublished" datetime="2019-05-23T18:15:34+09:00">2019-05-23</time>
+              <time title="Post created: 2019-05-23 18:15:34" itemprop="dateCreated datePublished" datetime="2019-05-23T18:15:34+09:00">2019-05-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-05-24 19:42:35" itemprop="dateModified" datetime="2019-05-24T19:42:35+09:00">2019-05-24</time>
               
             
           </span>
@@ -451,12 +463,12 @@
 <p>CSS 방법론에는 SMASS, BEM, OOCSS 등이 있지만 그중에서도 <code>BEM</code>을 적용해 보기로 했습니다. 그 이유는 BEM은 Sass나 Less에서 사용할 때 하위 요소로 내려갈 때마다 중복되는 이름을 <code>&amp;</code>로 생략하여 편하게 작성할 수 있기 때문입니다.<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block</span> &#123;</span><br><span class="line">  <span class="comment">/* CSS declarations for `.block` */</span></span><br><span class="line">  &amp;__element &#123; <span class="comment">/* CSS declarations for `.block__element` */</span> &#125;</span><br><span class="line">  &amp;--modifier &#123;</span><br><span class="line">    <span class="comment">/* CSS declarations for `.block--modifier` */</span></span><br><span class="line">    &amp;__element &#123; <span class="comment">/* CSS declarations for `.block--modifier__element` */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="BEM-Block-Element-Modifier"><a href="#BEM-Block-Element-Modifier" class="headerlink" title="BEM(Block Element Modifier)"></a>BEM(Block Element Modifier)</h2><p><img src="/images/bem_logo.png" alt="BEM" width="200" style="border:0 none;"></p>
 <p>BEM은 “Yandex”라는 회사에서 개발한 방법론으로, BEM 이름 그대로 블록(Block) / 요소(Element) / 수식어(Modifier)로 구분하고 이를 두 개의 언더 스코어(__)나 하이픈(--)으로 연결한 형태로 작명하는(<code>block__element--modifier</code>, <code>block--modifier</code>) 형태를 띱니다.</p>
-<h4 id="작명-규칙-Naming-Convention"><a href="#작명-규칙-Naming-Convention" class="headerlink" title="작명 규칙(Naming Convention)"></a>작명 규칙(Naming Convention)</h4><ul>
+<h3 id="작명-규칙-Naming-Convention"><a href="#작명-규칙-Naming-Convention" class="headerlink" title="작명 규칙(Naming Convention)"></a>작명 규칙(Naming Convention)</h3><ul>
 <li>개발, 디버깅, 유지보수를 위하여 CSS 선택자의 이름을 가능한 한 <strong>명확하게</strong> 만드는 것이 목표이다.</li>
 <li><strong>영어 소문자</strong>, <strong>숫자</strong>만을 이용한다.</li>
 <li>여러단어의 조합은 <strong>하이픈(-)</strong>으로 연결한다.</li>
 </ul>
-<h4 id="블록-Block"><a href="#블록-Block" class="headerlink" title="블록(Block)"></a>블록(Block)</h4><ul>
+<h3 id="블록-Block"><a href="#블록-Block" class="headerlink" title="블록(Block)"></a>블록(Block)</h3><ul>
 <li>페이지 구성 요소 중 <strong>재사용</strong> 할 수 있고, 기능적으로 <strong>독립적인</strong>. 즉, 하나의 <strong>컴포넌트</strong> 요소이다.</li>
 <li>HTML에서 블록은 <strong>class 속성</strong>으로 표시한다.</li>
 <li>형태(red, big)가 아닌 <strong>목적(menu, button)</strong>에 맞게 결정한다.</li>
@@ -465,7 +477,7 @@
 <li>블록은 <strong>서로 중첩</strong>해서 작성할 수 있다.<br>예) <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search-form"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="요소-Element"><a href="#요소-Element" class="headerlink" title="요소(Element)"></a>요소(Element)</h4><ul>
+<h3 id="요소-Element"><a href="#요소-Element" class="headerlink" title="요소(Element)"></a>요소(Element)</h3><ul>
 <li><strong>블록이 포함</strong>하고 있는 하나의 조각(<strong>특정 기능</strong>)이다.</li>
 <li><code>block__element</code> 형태로, 블록 뒤에 두개의 언더 스코어(__)로 연결한다.</li>
 <li><p><strong>형태(색상, 크기)</strong>가 아닌 <strong>목적(item, text, title)</strong>에 맞게 결정해야 한다.<br>예)</p>
@@ -476,7 +488,7 @@
 <li>요소는 <strong>블록의 부분으로만 사용</strong>할 수 있고 다른 요소의 부분으로는 사용할 수 없다.</li>
 <li>모든 블록에서 <strong>요소는 필수가 아닌 선택적으로 사용</strong>한다. 즉, 블록안에 요소가 없을 수도 있다.<br>예) menu__item, header__title …</li>
 </ul>
-<h4 id="수식어-Modifier"><a href="#수식어-Modifier" class="headerlink" title="수식어(Modifier)"></a>수식어(Modifier)</h4><ul>
+<h3 id="수식어-Modifier"><a href="#수식어-Modifier" class="headerlink" title="수식어(Modifier)"></a>수식어(Modifier)</h3><ul>
 <li>블록이나 요소의 <strong>모양(color, size..)</strong>, <strong>상태(disabled, checked..)</strong>를 정의한다.</li>
 <li><code>block__element--modifier</code>, <code>block--modifier</code> 형태로, 블록이나 요소 뒤에 두개의 하이픈(–)으로 연결한다.</li>
 <li>수식어는 <strong>불리언 타입(boolean)</strong>과 <strong>키-벨류</strong> 타입이 있다.</li>
@@ -484,7 +496,7 @@
 <li><strong>키-벨류 타입</strong>: 키, 벨류를 하이픈으로 연결하여 표시한다. (<code>color-red</code>, <code>theme-ocean</code>)</li>
 <li>수식어는 <strong>단독으로 사용할 수 없다</strong>. 즉, 기본 <strong>블록과 요소에 추가하여 사용</strong>해야 한다. (<code>class=&quot;block__element block__element--modifier&quot;</code>)</li>
 </ul>
-<h4 id="혼합사용-Mix"><a href="#혼합사용-Mix" class="headerlink" title="혼합사용(Mix)"></a>혼합사용(Mix)</h4><ul>
+<h3 id="혼합사용-Mix"><a href="#혼합사용-Mix" class="headerlink" title="혼합사용(Mix)"></a>혼합사용(Mix)</h3><ul>
 <li><code>block1</code>, <code>block2__element</code> 형태로 사용할 수 있다.</li>
 <li><code>block2__element</code>에 여백이나 위치를 지정하고 block1은 독립적으로 유지할 수 있다.<br>예)<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search-form header__search-form"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -492,7 +504,7 @@
 <hr>
 <p>처음엔 이러한 방법론이 너무 거추장스럽고 거부감이 들어 받아들이지 않았지만, 프로젝트의 규모가 커질수록 그리고 협업에서의 이러한 최소한의 규칙(일관성)은 필요하다고 생각합니다.</p>
 <p>하지만, 위의 내용을 모두 그대로 사용하는 것이 아닌. 팀 또는 프로젝트 내에서 정비하여 대부분이 만족할 수 있는 더 나은 규칙을 만들어나가는 것이 중요할 것입니다.</p>
-<h3 id="참고-링크"><a href="#참고-링크" class="headerlink" title="참고 링크"></a>참고 링크</h3><ul>
+<h2 id="참고-링크"><a href="#참고-링크" class="headerlink" title="참고 링크"></a>참고 링크</h2><ul>
 <li><a href="https://medium.com/witinweb/css-%EB%B0%A9%EB%B2%95%EB%A1%A0-1-bem-block-element-modifier-1c03034e65a1" target="_blank" rel="noopener">https://medium.com/witinweb/css-%EB%B0%A9%EB%B2%95%EB%A1%A0-1-bem-block-element-modifier-1c03034e65a1</a></li>
 <li><a href="https://webclub.tistory.com/263" target="_blank" rel="noopener">https://webclub.tistory.com/263</a></li>
 <li><a href="https://a-tothe-z.tistory.com/2" target="_blank" rel="noopener">https://a-tothe-z.tistory.com/2</a></li>
@@ -546,6 +558,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/24/vuejs-vuex/" rel="prev" title="[Vue.js] Vuex 알아보기">
+                [Vue.js] Vuex 알아보기 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -616,7 +632,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -720,7 +736,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -807,7 +829,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BEM-Block-Element-Modifier"><span class="nav-number">1.</span> <span class="nav-text">BEM(Block Element Modifier)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#작명-규칙-Naming-Convention"><span class="nav-number">1.0.1.</span> <span class="nav-text">작명 규칙(Naming Convention)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#블록-Block"><span class="nav-number">1.0.2.</span> <span class="nav-text">블록(Block)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#요소-Element"><span class="nav-number">1.0.3.</span> <span class="nav-text">요소(Element)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#수식어-Modifier"><span class="nav-number">1.0.4.</span> <span class="nav-text">수식어(Modifier)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#혼합사용-Mix"><span class="nav-number">1.0.5.</span> <span class="nav-text">혼합사용(Mix)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#참고-링크"><span class="nav-number">1.1.</span> <span class="nav-text">참고 링크</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BEM-Block-Element-Modifier"><span class="nav-number">1.</span> <span class="nav-text">BEM(Block Element Modifier)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#작명-규칙-Naming-Convention"><span class="nav-number">1.1.</span> <span class="nav-text">작명 규칙(Naming Convention)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#블록-Block"><span class="nav-number">1.2.</span> <span class="nav-text">블록(Block)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#요소-Element"><span class="nav-number">1.3.</span> <span class="nav-text">요소(Element)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#수식어-Modifier"><span class="nav-number">1.4.</span> <span class="nav-text">수식어(Modifier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#혼합사용-Mix"><span class="nav-number">1.5.</span> <span class="nav-text">혼합사용(Mix)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고-링크"><span class="nav-number">2.</span> <span class="nav-text">참고 링크</span></a></li></ol></div>
             
 
           </div>

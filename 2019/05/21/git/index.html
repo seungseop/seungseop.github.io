@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Sam&#39;s">
 <meta property="og:description" content="Git 명령어들을 다뤄본다. init새로운 저장소를 만든다(대상 폴더 내에 .git 저장소 생성)12$ git init&amp;gt; Initialized empty Git repository in D:/seop/test-ss/.git/ clone저장소를 복제한다.1234# 로컬 저장소 복제$ git clone /로컬/저장소/경로# 외부 저장소 복제$ git cl">
 <meta property="og:locale" content="ko">
-<meta property="og:updated_time" content="2019-05-21T07:37:02.347Z">
+<meta property="og:updated_time" content="2019-05-24T10:48:04.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 명령어">
 <meta name="twitter:description" content="Git 명령어들을 다뤄본다. init새로운 저장소를 만든다(대상 폴더 내에 .git 저장소 생성)12$ git init&amp;gt; Initialized empty Git repository in D:/seop/test-ss/.git/ clone저장소를 복제한다.1234# 로컬 저장소 복제$ git clone /로컬/저장소/경로# 외부 저장소 복제$ git cl">
@@ -386,6 +386,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Updated at: 2019-05-24 19:48:04" itemprop="dateModified" datetime="2019-05-24T19:48:04+09:00">2019-05-24</time>
+              
+            
           </span>
 
           
@@ -443,8 +459,8 @@
 <p>(친절하게도 각각 파일들에 대해 어떻게 처리하면 좋은지 다음 명령어 들을 설명해준다.)</p>
 <h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>변경된(추가/수정/삭제) 내용들을 인덱스(<code>Stage</code>)로 올린다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 특정 파일</span></span><br><span class="line">$ git add &lt;파일 이름&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 폴더 전체</span></span><br><span class="line">$ git add *</span><br><span class="line"><span class="comment"># 또는 "git add ."</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><p>변경된 내용들을 확정(commit)한다.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -m, --message / &lt;msg&gt; 즉 "커밋 메세지" 옵션</span></span><br><span class="line">$ git commit -m <span class="string">"커밋 메세지"</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">## push</span></span><br><span class="line">로컬 저장소에 있는 변경 내용들을 원격 저장소에 발행(push)한다.</span><br><span class="line">``` bash</span><br><span class="line">$ git push origin &lt;가지(branch) 명&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="TIP-각-명령어들은-help-옵션을-통해-메뉴얼-페이지로-연결이-가능하다"><a href="#TIP-각-명령어들은-help-옵션을-통해-메뉴얼-페이지로-연결이-가능하다" class="headerlink" title="TIP : 각 명령어들은 --help 옵션을 통해 메뉴얼 페이지로 연결이 가능하다."></a>TIP : 각 명령어들은 <code>--help</code> 옵션을 통해 메뉴얼 페이지로 연결이 가능하다.</h3><p>예) <code>$ git commit --help</code>를 하면 <code>commit</code> 명령어에 대한 메뉴얼 페이지가 열린다.</p>
-<h3 id="참고-링크"><a href="#참고-링크" class="headerlink" title="참고 링크"></a>참고 링크</h3><ul>
+<h2 id="help"><a href="#help" class="headerlink" title="--help"></a>--help</h2><p>각 명령어들은 <code>--help</code> 옵션을 통해 메뉴얼 페이지로 연결이 가능하다.<br>예) <code>$ git commit --help</code>를 하면 <code>commit</code> 명령어에 대한 메뉴얼 페이지가 열린다.</p>
+<h2 id="참고-링크"><a href="#참고-링크" class="headerlink" title="참고 링크"></a>참고 링크</h2><ul>
 <li><a href="https://rogerdudler.github.io/git-guide/index.ko.html" target="_blank" rel="noopener">git - 간편 안내서</a></li>
 </ul>
 
@@ -572,7 +588,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">포스트</span>
                   </a>
                 </div>
@@ -676,7 +692,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">태그</span>
                   </a>
                 </div>
@@ -763,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-number">1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone"><span class="nav-number">2.</span> <span class="nav-text">clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#remote"><span class="nav-number">3.</span> <span class="nav-text">remote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#status"><span class="nav-number">4.</span> <span class="nav-text">status</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add"><span class="nav-number">5.</span> <span class="nav-text">add</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commit"><span class="nav-number">6.</span> <span class="nav-text">commit</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TIP-각-명령어들은-help-옵션을-통해-메뉴얼-페이지로-연결이-가능하다"><span class="nav-number">6.1.</span> <span class="nav-text">TIP : 각 명령어들은 --help 옵션을 통해 메뉴얼 페이지로 연결이 가능하다.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#참고-링크"><span class="nav-number">6.2.</span> <span class="nav-text">참고 링크</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-number">1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clone"><span class="nav-number">2.</span> <span class="nav-text">clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#remote"><span class="nav-number">3.</span> <span class="nav-text">remote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#status"><span class="nav-number">4.</span> <span class="nav-text">status</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add"><span class="nav-number">5.</span> <span class="nav-text">add</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#commit"><span class="nav-number">6.</span> <span class="nav-text">commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#help"><span class="nav-number">7.</span> <span class="nav-text">--help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참고-링크"><span class="nav-number">8.</span> <span class="nav-text">참고 링크</span></a></li></ol></div>
             
 
           </div>
