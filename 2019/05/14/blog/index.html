@@ -101,7 +101,7 @@
 
 
   <meta name="description" content="Github을 사용하고 있는 개발자들이 많이 사용하고 있는 Github Pages를 활용한 블로그를 만들어본다.방법은 정적 사이트 생성기(Generator, 마크다운.md파일을 HTML.html파일로 변환해준다)를 활용하는데, 알려진 제너레이터로는 :  jekyll hugo gatsby hexo  등이 있다. 나는 여기에서 Hexo를 사용해보도록 한다. 시">
-<meta name="keywords" content="blog,github,hexo">
+<meta name="keywords" content="blog,hexo,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github Pages에 Blog 만들기">
 <meta property="og:url" content="https://seungseop.github.io/2019/05/14/blog/index.html">
@@ -430,6 +430,19 @@
           
             
             
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">댓글: </span>
+                <a href="/2019/05/14/blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/14/blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -518,9 +531,9 @@ Tip : 저장소 이름은 상관없습니다.</li>
           
             <a href="/tags/blog/" rel="tag"># blog</a>
           
-            <a href="/tags/github/" rel="tag"># github</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
           
         </div>
       
@@ -562,6 +575,13 @@ Tip : 저장소 이름은 상관없습니다.</li>
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
 
   
 
@@ -657,6 +677,8 @@ Tip : 저장소 이름은 상관없습니다.</li>
                     
                   
                     
+                    
+                      
                     
                       
                     
@@ -971,6 +993,29 @@ Tip : 저장소 이름은 상관없습니다.</li>
   
 
   
+  
+  <script id="dsq-count-scr" src="https://sams-web-story.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://seungseop.github.io/2019/05/14/blog/";
+    this.page.identifier = "2019/05/14/blog/";
+    this.page.title = 'Github Pages에 Blog 만들기';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sams-web-story.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
 
 
   
